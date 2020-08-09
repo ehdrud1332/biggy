@@ -35,8 +35,8 @@ const Button = styled.View`
 `;
 
 const TextSign = styled.Text`
-  color: white;
-  font-weight: bold;
+   color: white;
+   font-weight: bold;
 `;
 
 const SplashScreen = ({navigation}) => {
@@ -80,7 +80,7 @@ const SplashScreen = ({navigation}) => {
                                 flexDirection: 'row'
                             }}
                         >
-                            <TextSign>Get Started     </TextSign>
+                            <TextSign>Get Started    </TextSign>
                             <Ionicons
                                 name="ios-arrow-forward"
                                 color="#fff"
