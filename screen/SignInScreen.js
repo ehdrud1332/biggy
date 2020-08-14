@@ -110,6 +110,14 @@ const SignInScreen = ({navigation}) => {
     return (
         <Container>
             <StatusBar barStyle="black"/>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                <FontAwesome
+                    name="arrow-left"
+                    size={25}
+                    color="#fff"
+                    style={{marginTop:30, marginLeft:30}}
+                />
+            </TouchableOpacity>
             <Header>
                 <TextHeader>Login Now</TextHeader>
             </Header>
