@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StatusBar, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
+import {StatusBar, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 import * as Animatable from 'react-native-animatable';
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
@@ -111,6 +111,7 @@ const SignInScreen = ({navigation}) => {
     return (
         <DismissKeyboard>
             <Container>
+                <StatusBar backgroundColor="#009387" barStyle="light-content" />
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <FontAwesome
                         name="arrow-left"

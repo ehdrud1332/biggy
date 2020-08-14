@@ -125,7 +125,7 @@ const SignUpScreen = ({navigation}) => {
     return (
         <DismissKeyboard>
             <Container>
-                <StatusBar backgroundColor="black" barStyle="black"/>
+                <StatusBar backgroundColor="#009387" barStyle="light-content"/>
                 <Header>
                     <TextHeader>Register Now</TextHeader>
                 </Header>
