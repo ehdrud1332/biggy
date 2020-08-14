@@ -52,7 +52,7 @@ const TextPrivate = styled.View`
 
 const Button = styled.View`
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
 `;
 
 const TextSign = styled.Text`
@@ -77,19 +77,48 @@ const SignUpScreen = ({navigation}) => {
     })
 
     const textInputChange = (val) => {
-
+        if(val.length !== 0) {
+            setData({
+                ...data,
+                email: val,
+                check_textInputChange: true
+            })
+        } else {
+            setData({
+                ...data,
+                email: val,
+                check_textInputChange: false
+            })
+        }
     }
 
     const handlePasswordChange = (val) => {
-
+        setData({
+            ...data,
+            password: val
+        })
     };
 
-    const handleConfirmPasswordChange = (val) => {}
-
-    const updateSecureTextEntry = () => {
-
+    const handleConfirmPasswordChange = (val) => {
+        setData({
+            ...data,
+            confirm_password: val
+        })
     }
 
+    const updateSecureTextEntry = () => {
+        setData({
+            ...data,
+            secureTextEntry: !data.secureTextEntry
+        })
+    }
+
+    const updateConfirmSecureTextEntry = () => {
+        setData({
+            ...data,
+            confirm_secureTextEntry: !data.confirm_secureTextEntry
+        })
+    }
 
 
     return (
@@ -109,11 +138,35 @@ const SignUpScreen = ({navigation}) => {
                     paddingHorizontal: 30
                 }}
             >
-                <TextFooter>Email</TextFooter>
+                <TextFooter>User Name</TextFooter>
+                <Action>
+                    <FontAwesome
+                        name="user-circle"
+                        color="black"
+                        size={20}
+                    />
+                    <TextInput
+                        placeholder="Your UserName"
+                        autoCapitalize="none"
+                        onChangeText={(val) => textInputChange(val)}
+                    />
+                    {data.check_textInputChange ? (
+                        <Animatable.View
+                            animation="bounceIn"
+                        >
+                            <Feather
+                                name="check-circle"
+                                color="green"
+                                size={20}
+                            />
+                        </Animatable.View>
+                    ) : (null)}
+                </Action>
+                <TextFooter style={{marginTop: 35}}>Email</TextFooter>
                 <Action>
                     <FontAwesome
                         name="envelope"
-                        color="black"
+                        color="black"f
                         size={20}
                     />
                     <TextInput
@@ -156,7 +209,7 @@ const SignUpScreen = ({navigation}) => {
                         ) :
                         <Feather
                             name="eye"
-                            color={'grey'}
+                            color={'green'}
                             size={20}
                         />}
                     </TouchableOpacity>
@@ -175,8 +228,8 @@ const SignUpScreen = ({navigation}) => {
                         autoCapitalize="none"
                         onChange={(val) => handleConfirmPasswordChange(val)}
                     />
-                    <TouchableOpacity onPress={updateSecureTextEntry}>
-                        {data.secureTextEntry ? (
+                    <TouchableOpacity onPress={updateConfirmSecureTextEntry}>
+                        {data.confirm_secureTextEntry ? (
                             <Feather
                                 name="eye-off"
                                 color="grey"
@@ -184,7 +237,7 @@ const SignUpScreen = ({navigation}) => {
                             />
                         ) : <Feather
                             name="eye"
-                            color="grey"
+                            color="green"
                             size={20}
                         />}
                     </TouchableOpacity>
