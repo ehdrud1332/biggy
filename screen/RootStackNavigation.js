@@ -8,10 +8,40 @@ import SignInScreen from "./SignInScreen";
 const RootStack = createStackNavigator();
 
 const RootStackNavigation = () => (
-    <RootStack.Navigator>
-        <RootStack.Screen name="SplashScreen" component={SplashScreen} />
-        <RootStack.Screen name="SignInScreen" component={SignInScreen} />
-        <RootStack.Screen name="SignUpScreen" component={SignUpScreen} />
+    <RootStack.Navigator
+        screenOptions={{
+            headerBackTitleVisible: false,
+            headerTransparent: true,
+        }}
+    >
+        <RootStack.Screen
+            name="SignUpScreen"
+            component={SignUpScreen}
+            options={{
+                headerTitleStyle: {
+                    color: "white"
+                }
+            }}
+        />
+        <RootStack.Screen
+            name="SplashScreen"
+            component={SplashScreen}
+            options={{
+                headerTitleStyle: {
+                    color: "white"
+                }
+            }}
+        />
+        <RootStack.Screen
+            name="SignInScreen"
+            component={SignInScreen}
+            options={{
+                headerTitleStyle: {
+                    color: "white"
+                }
+            }}
+        />
+
     </RootStack.Navigator>
 )
 

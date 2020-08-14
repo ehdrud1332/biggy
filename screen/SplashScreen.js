@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {TouchableOpacity, Dimensions} from 'react-native';
+import {TouchableOpacity, Dimensions, StatusBar} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import {LinearGradient} from 'expo-linear-gradient';
 import {Ionicons} from '@expo/vector-icons';
@@ -42,6 +42,7 @@ const TextSign = styled.Text`
 const SplashScreen = ({navigation}) => {
     return (
         <Container>
+            <StatusBar backgroundColor="white" cbarStyle="white"/>
             <Header>
                 <Animatable.Image
                     animation="bounceIn"
