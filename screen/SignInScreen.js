@@ -190,20 +190,30 @@ const SignInScreen = ({navigation}) => {
                         </TouchableOpacity>
                     </Action>
                     <Button>
-                        <LinearGradient
-                            colors={['#4e4e4e', '#111111']}
-                            style={{
-                                width: '100%',
-                                height: 50,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                borderRadius: 10
-                            }}
+                        <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")}
+                              style={{
+                                  width: '100%',
+                                  height: 50,
+                                  justifyContent: 'center',
+                                  alignItems: 'center',
+                                  borderRadius: 10
+                              }}
                         >
-                            <TextSign style={{color: '#fff'}}>
-                                Sign Up
-                            </TextSign>
-                        </LinearGradient>
+                            <LinearGradient
+                                colors={['#4e4e4e', '#111111']}
+                                style={{
+                                    width: '100%',
+                                    height: 50,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    borderRadius: 10
+                                }}
+                            >
+                                <TextSign style={{color: '#fff'}}>
+                                    Sign Up
+                                </TextSign>
+                            </LinearGradient>
+                        </TouchableOpacity>
 
                         <TouchableOpacity
                             onPress={() => navigation.goBack()}

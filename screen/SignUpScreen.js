@@ -164,7 +164,7 @@ const SignUpScreen = ({navigation}) => {
                             </Animatable.View>
                         ) : (null)}
                     </Action>
-                    <TextFooter style={{marginTop: 35}}>Email</TextFooter>
+                    <TextFooter style={{marginTop: 20}}>Email</TextFooter>
                     <Action>
                         <FontAwesome
                             name="envelope"
@@ -188,7 +188,7 @@ const SignUpScreen = ({navigation}) => {
                             </Animatable.View>
                         ) : (null)}
                     </Action>
-                    <TextFooter style={{marginTop: 35}}>Password</TextFooter>
+                    <TextFooter style={{marginTop: 20}}>Password</TextFooter>
                     <Action>
                         <Feather
                             name="lock"
@@ -217,7 +217,7 @@ const SignUpScreen = ({navigation}) => {
                         </TouchableOpacity>
                     </Action>
 
-                    <TextFooter style={{marginTop: 35}}>Confirm Password</TextFooter>
+                    <TextFooter style={{marginTop: 20}}>Confirm Password</TextFooter>
                     <Action>
                         <Feather
                             name="lock"
