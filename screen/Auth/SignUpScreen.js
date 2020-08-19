@@ -5,7 +5,7 @@ import * as Animatable from 'react-native-animatable';
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
 import Feather from '@expo/vector-icons/Feather';
 import {LinearGradient} from 'expo-linear-gradient';
-import DismissKeyboard from "../components/DismissKeyboard";
+import DismissKeyboard from "../../components/DismissKeyboard";
 
 const Container = styled.View`
   flex: 1;
