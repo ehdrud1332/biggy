@@ -42,7 +42,7 @@ const TextSign = styled.Text`
 const SplashScreen = ({navigation}) => {
     return (
         <Container>
-            <StatusBar backgroundColor="white" barStyle="white"/>
+            <StatusBar backgroundColor="#009387" barStyle="light-content"/>
             <Header>
                 <Animatable.Image
                     animation="bounceIn"

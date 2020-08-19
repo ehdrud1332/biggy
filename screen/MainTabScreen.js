@@ -9,6 +9,7 @@ import HomeScreen from "./Main/HomeScreen";
 import DetailScreen from "./Main/DetailScreen";
 import ExploreScreen from "./Main/ExploreScreen";
 import ProfileScreen from "./Main/ProfileScreen";
+import HomeStackScreen from "./Stack/HomeStackScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -22,7 +23,7 @@ const MainTabScreen = () => (
     >
         <Tab.Screen
             name="Home"
-            component={HomeScreen}
+            component={HomeStackScreen}
             options={{
                 tabBarLabel: "Home",
                 tabBarColor: "black",
