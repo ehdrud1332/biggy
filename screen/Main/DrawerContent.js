@@ -1,5 +1,5 @@
-import React from 'react';
-import {View} from 'react-native';
+import React, {useState} from 'react';
+import {View, Text} from 'react-native';
 import styled from 'styled-components/native';
 import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 import {
@@ -7,8 +7,10 @@ import {
     Paragraph,
     Drawer,
     TouchableRipple,
+    Switch
 } from 'react-native-paper';
 import Icon from '@expo/vector-icons/MaterialCommunityIcons';
+
 
 const DrawerCon = styled.View`
   flex: 1;
@@ -42,7 +44,23 @@ const Section = styled.View`
   margin-right: 15px;
 `;
 
-const DrawerContent = (props) => {
+const Preference = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding-Vertical: 12px;
+  padding-Horizontal: 16px;
+
+`;
+
+export function DrawerContent(props) {
+
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    const toggleTheme = () => {
+        setIsDarkTheme(!isDarkTheme);
+    }
+
+
     return (
         <View style={{flex: 1}}>
             <DrawerContentScrollView {...props}>
@@ -130,6 +148,17 @@ const DrawerContent = (props) => {
                                 onPress={() => {props.navigation.navigate("Bookmark")}}
                             />
 
+                        </Drawer.Section>
+
+                        <Drawer.Section title="Preferences">
+                            <TouchableRipple onPress={() => {toggleTheme()}}>
+                                <Preference>
+                                    <Text>Dark Theme</Text>
+                                    <View pointerEvents="none">
+                                        <Switch value={isDarkTheme}/>
+                                    </View>
+                                </Preference>
+                            </TouchableRipple>
                         </Drawer.Section>
                     </UserInfoSection>
                 </DrawerCon>
