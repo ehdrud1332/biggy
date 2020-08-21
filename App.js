@@ -12,9 +12,10 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-        <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>
-            <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
-        </Drawer.Navigator>
+        {/*<Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>}>*/}
+        {/*    <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />*/}
+        {/*</Drawer.Navigator>*/}
+        <RootStackNavigation />
     </NavigationContainer>
   );
 }

@@ -305,7 +305,7 @@ const HomeScreen = () => {
                         <CardTitle>Amazing Food Place</CardTitle>
                         <Rating rating={4} reviews={99}/>
                         <CardDetails>
-                            Amazing desc for this amaing place
+                            Amazing desc for this amazing place
                         </CardDetails>
                     </CardInfo>
                 </Cards>

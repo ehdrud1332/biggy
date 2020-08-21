@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StatusBar, TouchableOpacity} from 'react-native';
+import {StatusBar, TouchableOpacity, Text, Image} from 'react-native';
 import styled from 'styled-components/native';
 import * as Animatable from 'react-native-animatable';
 import FontAwesome from '@expo/vector-icons/FontAwesome5';
@@ -57,13 +57,16 @@ const Button = styled.View`
 `;
 
 const TextSign = styled.Text`
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
+  letter-spacing: 1px;
 `;
 
 const ColorTextPrivate = styled.Text`
   color: #b3b3b3;
 `;
+
+
 
 
 const SignInScreen = ({navigation}) => {
@@ -189,6 +192,20 @@ const SignInScreen = ({navigation}) => {
                             )}
                         </TouchableOpacity>
                     </Action>
+
+                    <TouchableOpacity>
+                        <Text
+                            style={{
+                                marginTop: 10,
+                                fontSize: 12,
+                                color: "#0d9fff",
+                                fontWeight: "bold"
+                            }}
+                        >
+                            Forgot your password?
+                        </Text>
+                    </TouchableOpacity>
+
                     <Button>
                         <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")}
                               style={{
@@ -196,7 +213,6 @@ const SignInScreen = ({navigation}) => {
                                   height: 50,
                                   justifyContent: 'center',
                                   alignItems: 'center',
-                                  borderRadius: 10
                               }}
                         >
                             <LinearGradient
@@ -206,30 +222,47 @@ const SignInScreen = ({navigation}) => {
                                     height: 50,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    borderRadius: 10
+                                    borderRadius: 30
                                 }}
                             >
                                 <TextSign style={{color: '#fff'}}>
-                                    Sign Up
+                                    SIGN UP FREE
                                 </TextSign>
                             </LinearGradient>
                         </TouchableOpacity>
 
+                        <TouchableOpacity onPress={() => navigation.navigate("SignUpScreen")}
+                                          style={{
+                                              width: '100%',
+                                              height: 50,
+                                              justifyContent: 'center',
+                                              alignItems: 'center',
+                                              borderRadius: 30,
+                                              borderColor: '#000000',
+                                              borderWidth: 1,
+                                              marginTop: 15,
+                                              flexDirection: "row"
+                                          }}
+                        >
+                                <Image source={require('../../assets/S1.png')}
+                                    style={{
+                                        height: 30,
+                                        width: 30,
+                                        marginRight: 15,
+                                    }}
+                                />
+                                <TextSign>
+                                    CONTINUE WITH FACEBOOK
+                                </TextSign>
+                        </TouchableOpacity>
+
                         <TouchableOpacity
-                            onPress={() => navigation.goBack()}
                             style={{
-                                width: '100%',
-                                height: 50,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                borderRadius: 10,
-                                borderColor: '#000000',
-                                borderWidth: 1,
-                                marginTop: 15
+                                marginTop: 20
                             }}
                         >
                             <TextSign style={{color: "black"}}>
-                                Sign In
+                                LOG IN
                             </TextSign>
                         </TouchableOpacity>
                     </Button>
