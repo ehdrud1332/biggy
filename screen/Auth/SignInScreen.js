@@ -222,7 +222,7 @@ const SignInScreen = ({navigation}) => {
                                     height: 50,
                                     justifyContent: 'center',
                                     alignItems: 'center',
-                                    borderRadius: 30
+                                    borderRadius: 50/2
                                 }}
                             >
                                 <TextSign style={{color: '#fff'}}>
@@ -237,7 +237,7 @@ const SignInScreen = ({navigation}) => {
                                               height: 50,
                                               justifyContent: 'center',
                                               alignItems: 'center',
-                                              borderRadius: 30,
+                                              borderRadius: 50/2,
                                               borderColor: '#000000',
                                               borderWidth: 1,
                                               marginTop: 15,

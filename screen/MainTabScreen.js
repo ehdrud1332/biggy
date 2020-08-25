@@ -3,10 +3,10 @@ import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import Icon from '@expo/vector-icons/Ionicons';
+import {Ionicons} from '@expo/vector-icons';
+import FontAwesome from '@expo/vector-icons/FontAwesome'
 
-import HomeScreen from "./Main/HomeScreen";
-import DetailScreen from "./Main/DetailScreen";
+import HotelScreen from "./Main/HotelScreen";
 import ExploreScreen from "./Main/ExploreScreen";
 import ProfileScreen from "./Main/ProfileScreen";
 import HomeStackScreen from "./Stack/HomeStackScreen";
@@ -28,7 +28,22 @@ const MainTabScreen = () => (
                 tabBarLabel: "Home",
                 tabBarColor: "black",
                 tabBarIcon: () => (
-                    <Icon name="ios-home"
+                    <Ionicons name="ios-home"
+                          color="white"
+                          size={26}
+                    />
+                )
+            }}
+        />
+
+        <Tab.Screen
+            name="Hotel"
+            component={HotelScreen}
+            options={{
+                tabBarLabel: "Hotel",
+                tabBarColor: "black",
+                tabBarIcon: () => (
+                    <FontAwesome name="hotel"
                           color="white"
                           size={26}
                     />
@@ -43,7 +58,7 @@ const MainTabScreen = () => (
                 tabBarLabel: "Explore",
                 tabBarColor: "black",
                 tabBarIcon: () => (
-                    <Icon name="ios-home"
+                    <FontAwesome name="search"
                           color="white"
                           size={26}
                     />
@@ -58,7 +73,7 @@ const MainTabScreen = () => (
                 tabBarLabel: "Profile",
                 tabBarColor: "black",
                 tabBarIcon: () => (
-                    <Icon name="ios-home"
+                    <Ionicons name="md-person"
                           color="white"
                           size={26}
                     />
