@@ -7,6 +7,8 @@ import Feather from '@expo/vector-icons/Feather';
 import {LinearGradient} from 'expo-linear-gradient';
 import DismissKeyboard from "../../components/DismissKeyboard";
 
+import FindPassword from "./FindPassword";
+
 const Container = styled.View`
   flex: 1;
   background-color: black;
@@ -193,7 +195,7 @@ const SignInScreen = ({navigation}) => {
                         </TouchableOpacity>
                     </Action>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("FindPassword")}>
                         <Text
                             style={{
                                 marginTop: 10,
