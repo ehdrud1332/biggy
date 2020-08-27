@@ -168,7 +168,7 @@ const SignUpScreen = ({navigation}) => {
                     <Action>
                         <FontAwesome
                             name="envelope"
-                            color="black"f
+                            color="black"
                             size={20}
                         />
                         <TextInput

@@ -1,17 +1,45 @@
-import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, TouchableOpacity, TouchableHighlight} from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import {Feather} from '@expo/vector-icons';
 import {gs, colors} from '../styles';
 
 const Bookmark = () => {
+
+    const [inPress, setInPress] = useState({
+        check_bookMark : false
+    })
+
+    const inPressBookmark = (click) => {
+        setInPress({
+            ...inPress,
+            check_bookMark: !inPress.check_bookMark
+        })
+    }
+
     return (
-        <View style={styles.bookmark}>
-            <Feather
-                name="bookmark"
-                size={24}
-                color={colors.pink}
-            />
-        </View>
+        <TouchableOpacity onPress={inPressBookmark}
+            style={{zIndex: 10}}
+        >
+            {inPress.check_bookMark ? (
+                <View style={styles.bookmark}>
+                    <Feather
+                        name="bookmark"
+                        size={24}
+                        color={colors.pink}
+                    />
+                </View>
+            ) : (
+                <View style={styles.bookmark2}>
+                    <Feather
+                        name="bookmark"
+                        size={24}
+                        color={colors.pink}
+                    />
+                </View>
+            )}
+
+        </TouchableOpacity>
     );
 };
 
@@ -25,6 +53,17 @@ const styles = StyleSheet.create({
         right: 32,
         top: -52 / 2,
         backgroundColor: colors.text,
+        ...gs.center,
+        borderRadius: 56/2,
+        zIndex: 10
+    },
+    bookmark2: {
+        position: 'absolute',
+        width: 56,
+        height: 56,
+        right: 32,
+        top: -52 / 2,
+        backgroundColor: "black",
         ...gs.center,
         borderRadius: 56/2,
         zIndex: 10
