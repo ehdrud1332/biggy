@@ -33,7 +33,7 @@ const FindPassword = ({navigation}) => {
                        autoCapitalize="none"
             />
 
-            <TouchableOpacity
+            <TouchableOpacity onPress={() => navigation.navigate("FindPassword2")}
                 style={{
                     marginTop: 16,
                     color: "#1c1c1c",
