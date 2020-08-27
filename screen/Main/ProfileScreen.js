@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     View,
     Text,
@@ -14,6 +14,34 @@ import Constants from 'expo-constants';
 import * as Permissions from 'expo-permissions';
 
 const ProfileScreen = () => {
+
+    const getPermissionsAsync = async() => {
+        if(Constants.platform === 'ios') {
+            const {status} = await Permissions.askAsync(Permissions.CAMERA_ROLL);
+            if(status !== "granted") {
+                alert ("Sorry, We need camera roll permissions to make this work!")
+            }
+        }
+    }
+
+    const pickerImage = async() => {
+        try {
+            let result = await ImagePicker.launchImageLibraryAsync({
+                mediaType : ImagePicker.MediaTypeOptions.All,
+                allowsEditing: true,
+                aspect: [4, 3],
+                quality: 1
+            })
+        } catch (e) {
+            console.log(e)
+        }
+
+    }
+
+    useEffect(() => {
+        getPermissionsAsync();
+    }, [])
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -29,7 +57,7 @@ const ProfileScreen = () => {
                     <View style={styles.dm}>
                         <MaterialIcons name="chat" size={18} color="#DFD8C8"/>
                     </View>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={pickerImage}>
                         <View style={styles.add}>
                             <Ionicons name="ios-add" size={48} color="#DFD8C8" style={{marginTop: 6, marginLeft: 2}}/>
                         </View>
