@@ -6,6 +6,7 @@ export const colors = {
     darkHl : "#666666",
     lightHl : "#888",
     pink: "#ea3372",
+    orange: "#F97878",
     text: "#fff",
     textsec: "#aaa"
 };
@@ -15,6 +16,7 @@ export const gs = StyleSheet.create({
         paddingVertical: 24,
         paddingHorizontal: 32,
         marginBottom: 8,
+        backgroundColor: colors.lightBg
     },
     sectionTitle: {
         fontWeight: "700",
@@ -27,7 +29,8 @@ export const gs = StyleSheet.create({
         alignItems: 'center'
     },
     rowBetween : {
-
+        flexDirection: "row",
+        justifyContent: "space-between"
     },
     center: {
         alignItems: "center",
@@ -41,5 +44,18 @@ export const gs = StyleSheet.create({
     title: {
         color: colors.text,
         fontSize: 30
+    },
+    subTitle: {
+        fontWeight: "600",
+        textTransform: "uppercase",
+        color: "rgba(255, 255, 255, 0.6)",
+        fontSize: 15,
+        letterSpacing: 1
+    },
+    button: {
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: colors.pink,
+        borderRadius: 100
     }
 })
