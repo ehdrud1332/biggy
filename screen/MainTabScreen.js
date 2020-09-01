@@ -15,7 +15,7 @@ const Tab = createBottomTabNavigator();
 
 const MainTabScreen = () => (
     <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="Profile2"
         tabBarOptions={{
             inactiveBackgroundColor: "#000000",
             activeBackgroundColor: "#000000",

@@ -57,5 +57,10 @@ export const gs = StyleSheet.create({
         alignItems: "center",
         backgroundColor: colors.pink,
         borderRadius: 100
+    },
+    smallText: {
+        fontSize: 12,
+        fontWeight: "800",
+        color: colors.text
     }
 })
