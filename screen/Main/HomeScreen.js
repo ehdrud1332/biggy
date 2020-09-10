@@ -48,14 +48,15 @@ const CategoryIcon = styled.View`
   align-self: center;
   width: 70px;
   height: 70px;
-  background-color: #fdeae7;
+  background-color: #2f2f2f;
   border-radius: 50px;
 `;
 
 const CategoryBtnText = styled.Text`
   align-self: center;
   margin-top: 5px;
-  color: #de4f35;
+  color: black;
+  font-weight: 500;
 `;
 
 const CardsWrapper = styled.View`
@@ -182,7 +183,7 @@ const HomeScreen = () => {
                     }}
                 >
                     <CategoryIcon>
-                        <Icon name="ios-restaurant" size={35} color="#FF6347"/>
+                        <Icon name="ios-restaurant" size={35} color="white"/>
                     </CategoryIcon>
                     <CategoryBtnText>Restaurant</CategoryBtnText>
                 </TouchableOpacity>
@@ -195,7 +196,7 @@ const HomeScreen = () => {
                     }}
                 >
                     <CategoryIcon>
-                        <MaterialCommunityIcons name="food-fork-drink" size={35} color="#FF6347"/>
+                        <MaterialCommunityIcons name="food-fork-drink" size={35} color="white"/>
                     </CategoryIcon>
                     <CategoryBtnText>FastFood Center</CategoryBtnText>
                 </TouchableOpacity>
@@ -208,7 +209,7 @@ const HomeScreen = () => {
                     }}
                 >
                     <CategoryIcon>
-                        <MaterialCommunityIcons name="food" size={35} color="#FF6347"/>
+                        <MaterialCommunityIcons name="food" size={35} color="white"/>
                     </CategoryIcon>
                     <CategoryBtnText>Snacks Corner</CategoryBtnText>
                 </TouchableOpacity>
@@ -224,7 +225,7 @@ const HomeScreen = () => {
                     }}
                 >
                     <CategoryIcon>
-                        <Fontisto name="hotel" size={35} color="#FF6347"/>
+                        <Fontisto name="hotel" size={35} color="white"/>
                     </CategoryIcon>
                     <CategoryBtnText>Hotels</CategoryBtnText>
                 </TouchableOpacity>
@@ -237,7 +238,7 @@ const HomeScreen = () => {
                     }}
                 >
                     <CategoryIcon>
-                        <Icon name="md-restaurant" size={35} color="#FF6347"/>
+                        <Icon name="md-restaurant" size={35} color="white"/>
                     </CategoryIcon>
                     <CategoryBtnText>Dineouts</CategoryBtnText>
                 </TouchableOpacity>
@@ -250,7 +251,7 @@ const HomeScreen = () => {
                     }}
                 >
                     <CategoryIcon>
-                        <MaterialIcons name="expand-more" size={35} color="#FF6347"/>
+                        <MaterialIcons name="expand-more" size={35} color="white"/>
                     </CategoryIcon>
                     <CategoryBtnText>Show more</CategoryBtnText>
                 </TouchableOpacity>
