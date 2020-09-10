@@ -39,19 +39,6 @@ const MainTabScreen = () => (
             }}
         />
 
-        <Tab.Screen
-            name="Hotel"
-            component={HotelScreen}
-            options={{
-                tabBarIcon: ({focused}) => (
-                    <FontAwesome
-                        name="hotel"
-                        color= {focused ? "#fff" : "#9b9b9b"}
-                        size={26}
-                    />
-                )
-            }}
-        />
 
         <Tab.Screen
             name="Explore"
@@ -67,19 +54,19 @@ const MainTabScreen = () => (
             }}
         />
 
-        <Tab.Screen
-            name="Profile2"
-            component={ProfileScreen2}
-            options={{
-                tabBarIcon: ({focused}) => (
-                    <Ionicons
-                        name="md-person"
-                        color= {focused ? "#fff" : "#9b9b9b"}
-                        size={26}
-                    />
-                )
-            }}
-        />
+        {/*<Tab.Screen*/}
+        {/*    name="Profile2"*/}
+        {/*    component={ProfileScreen2}*/}
+        {/*    options={{*/}
+        {/*        tabBarIcon: ({focused}) => (*/}
+        {/*            <Ionicons*/}
+        {/*                name="md-person"*/}
+        {/*                color= {focused ? "#fff" : "#9b9b9b"}*/}
+        {/*                size={26}*/}
+        {/*            />*/}
+        {/*        )*/}
+        {/*    }}*/}
+        {/*/>*/}
 
         <Tab.Screen
             name="Profile"
@@ -94,7 +81,6 @@ const MainTabScreen = () => (
                 )
             }}
         />
-
 
     </Tab.Navigator>
 )

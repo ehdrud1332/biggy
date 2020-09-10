@@ -10,7 +10,7 @@ import Stats from "../../components/Stats"
 const ExploreScreen = () => {
     return (
         <ScrollView style={styles.container}>
-            <StatusBar barStyle="light-content"/>
+            <StatusBar barStyle="dark-content"/>
             <Header />
             <View>
                 <Bookmark />
@@ -26,6 +26,6 @@ export default ExploreScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.darkBg
+        backgroundColor: "white"
     }
 })

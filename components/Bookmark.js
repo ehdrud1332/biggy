@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, TouchableOpacity, TouchableHighlight} from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import {Feather} from '@expo/vector-icons';
+import {Feather, FontAwesome} from '@expo/vector-icons';
 import {gs, colors} from '../styles';
 
 const Bookmark = () => {
@@ -23,7 +23,7 @@ const Bookmark = () => {
         >
             {inPress.check_bookMark ? (
                 <View style={styles.bookmark}>
-                    <Feather
+                    <FontAwesome
                         name="bookmark"
                         size={24}
                         color={colors.pink}
@@ -31,8 +31,8 @@ const Bookmark = () => {
                 </View>
             ) : (
                 <View style={styles.bookmark2}>
-                    <Feather
-                        name="bookmark"
+                    <FontAwesome
+                        name="bookmark-o"
                         size={24}
                         color={colors.pink}
                     />
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         height: 56,
         right: 32,
         top: -52 / 2,
-        backgroundColor: "black",
+        backgroundColor: "white",
         ...gs.center,
         borderRadius: 56/2,
         zIndex: 10
