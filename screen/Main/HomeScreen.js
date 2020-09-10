@@ -102,7 +102,7 @@ const HomeScreen = () => {
 
     return (
         <ScrollView style={{flex:1}}>
-            <StatusBar backgroundColor="#009387" barStyle="light-content"/>
+            <StatusBar backgroundColor="#009387"/>
             <SliderCon>
                 <Swiper
                     autoplay

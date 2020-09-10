@@ -140,30 +140,30 @@ const SignUpScreen = ({navigation}) => {
                         paddingHorizontal: 30
                     }}
                 >
-                    <TextFooter>User Name</TextFooter>
-                    <Action>
-                        <FontAwesome
-                            name="user-circle"
-                            color="black"
-                            size={20}
-                        />
-                        <TextInput
-                            placeholder="Your UserName"
-                            autoCapitalize="none"
-                            onChangeText={(val) => textInputChange(val)}
-                        />
-                        {data.check_textInputChange ? (
-                            <Animatable.View
-                                animation="bounceIn"
-                            >
-                                <Feather
-                                    name="check-circle"
-                                    color="green"
-                                    size={20}
-                                />
-                            </Animatable.View>
-                        ) : (null)}
-                    </Action>
+                    {/*<TextFooter>User Name</TextFooter>*/}
+                    {/*<Action>*/}
+                    {/*    <FontAwesome*/}
+                    {/*        name="user-circle"*/}
+                    {/*        color="black"*/}
+                    {/*        size={20}*/}
+                    {/*    />*/}
+                    {/*    <TextInput*/}
+                    {/*        placeholder="Your UserName"*/}
+                    {/*        autoCapitalize="none"*/}
+                    {/*        onChangeText={(val) => textInputChange(val)}*/}
+                    {/*    />*/}
+                    {/*    {data.check_textInputChange ? (*/}
+                    {/*        <Animatable.View*/}
+                    {/*            animation="bounceIn"*/}
+                    {/*        >*/}
+                    {/*            <Feather*/}
+                    {/*                name="check-circle"*/}
+                    {/*                color="green"*/}
+                    {/*                size={20}*/}
+                    {/*            />*/}
+                    {/*        </Animatable.View>*/}
+                    {/*    ) : (null)}*/}
+                    {/*</Action>*/}
                     <TextFooter style={{marginTop: 20}}>Email</TextFooter>
                     <Action>
                         <FontAwesome

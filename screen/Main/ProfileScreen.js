@@ -6,7 +6,8 @@ import {
     SafeAreaView,
     Image,
     ScrollView,
-    TouchableOpacity
+    TouchableOpacity,
+    StatusBar
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import {Ionicons, MaterialIcons} from '@expo/vector-icons';
@@ -44,6 +45,7 @@ const ProfileScreen = () => {
 
     return (
         <SafeAreaView style={styles.container}>
+            <StatusBar barStyle="dark-content"/>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.titleBar}>
                     <Ionicons name="ios-arrow-back" size={24} color="#52575D"/>
