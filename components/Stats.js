@@ -61,13 +61,12 @@ const styles = StyleSheet.create({
         width: 36,
         height: 36,
         borderRadius: 36 / 2,
-        borderWidth: 2,
-        borderColor: colors.lightBg
+        borderColor: "#444"
     },
     container: {
         ...gs.rowCenter,
         ...gs.sectionContainer,
-        backgroundColor: "#333130"
+        backgroundColor: "white"
     },
     weatherContainer: {
         ...gs.rowCenter,
@@ -77,12 +76,12 @@ const styles = StyleSheet.create({
         borderRightWidth: 1
     },
     title: {
-        color: colors.text,
+        color: "black",
         fontSize: 18,
         fontWeight: "800"
     },
     subTitle: {
-        color: colors.textsec,
+        color: "#444",
         fontSize: 10,
         fontWeight: "800"
     },

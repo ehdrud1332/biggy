@@ -16,11 +16,10 @@ export const gs = StyleSheet.create({
         paddingVertical: 24,
         paddingHorizontal: 32,
         marginBottom: 8,
-        backgroundColor: colors.lightBg
     },
     sectionTitle: {
         fontWeight: "700",
-        color: colors.text,
+        color: "black",
         fontSize: 15
     },
     rowCenter: {
@@ -42,7 +41,7 @@ export const gs = StyleSheet.create({
         marginVertical: 24
     },
     title: {
-        color: colors.text,
+        color: "black",
         fontSize: 30
     },
     subTitle: {

@@ -10,7 +10,7 @@ import Stats from "../../components/Stats"
 const ExploreScreen = () => {
     return (
         <ScrollView style={styles.container}>
-            <StatusBar barStyle="dark-content"/>
+            <StatusBar barStyle="light-content"/>
             <Header />
             <View>
                 <Bookmark />

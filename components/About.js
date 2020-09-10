@@ -31,7 +31,7 @@ export default About;
 const styles = StyleSheet.create({
     container: {
         ...gs.sectionContainer,
-        backgroundColor: colors.darkBg
+        color : "white"
     },
     info: {
         color: colors.textsec,

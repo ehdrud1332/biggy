@@ -26,7 +26,7 @@ const Bookmark = () => {
                     <FontAwesome
                         name="bookmark"
                         size={24}
-                        color={colors.pink}
+                        color="black"
                     />
                 </View>
             ) : (
@@ -34,7 +34,7 @@ const Bookmark = () => {
                     <FontAwesome
                         name="bookmark-o"
                         size={24}
-                        color={colors.pink}
+                        color="#444"
                     />
                 </View>
             )}
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.text,
         ...gs.center,
         borderRadius: 56/2,
-        zIndex: 10
+        zIndex: 10,
     },
     bookmark2: {
         position: 'absolute',
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         ...gs.center,
         borderRadius: 56/2,
-        zIndex: 10
+        zIndex: 10,
+
     }
 })
