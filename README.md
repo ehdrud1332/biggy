@@ -15,7 +15,7 @@
 
 ## 활용한 기술
 -------------
-- nodeJS, react-native
+- nodeJS, react-native, Hook(useState, useEffect)
 - expo-linear-gradient, react-native-animatable, @expo/vector-icons
 - DrawerScreen, Vertical&HorizontalCardSwiper, HooK(useState, useEffect) 등
 
