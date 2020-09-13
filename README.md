@@ -15,9 +15,9 @@
 
 ## 활용한 기술
 -------------
-- nodeJS, react-native, Hook(useState, useEffect)
+- nodeJS, react-native
 - expo-linear-gradient, react-native-animatable, @expo/vector-icons
-- DrawerScreen, Vertical&HorizontalCardSwiper, HooK(useState, useEffect) 등
+- DrawerScreen, Vertical&HorizontalCardSwiper, HooK(useState, useEffect
 
 ## Study Note
 ------------
@@ -44,9 +44,9 @@
 
 ## To do List
 ------------------------
-✔︎ Backend 연결
-✔︎ Hook 숙련되게 연습
-✔︎ API연결
+- [ ] Backend 연결
+- [ ] Hook 숙련되게 연습
+- [ ] API연결
 
 
 
